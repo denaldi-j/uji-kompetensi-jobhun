@@ -4,17 +4,8 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PenggunaController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-})->name('home');
-
-
-Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
-// ->middleware(['auth', 'verified'])
+Route::get('/', [BukuController::class, 'index'])->name('home');
 
 Route::prefix('buku')->name('buku.')->group(function () {
     Route::get('/', [BukuController::class, 'index'])->name('index');
@@ -36,7 +27,3 @@ Route::prefix('peminjaman')->name('peminjaman.')->group(function () {
     Route::post('/update', [PeminjamanController::class, 'pengembalian'])->name('update');
 });
 
-
-
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';

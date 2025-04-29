@@ -263,7 +263,7 @@ function handleEndDateChange(date: DateValue) {
         <Dialog v-model:open="isDialogOpen">
             <DialogContent class="sm:max-w-[40rem]">
                 <DialogHeader>
-                    <DialogTitle>Form Buku</DialogTitle>
+                    <DialogTitle>Form Pinjaman</DialogTitle>
                     <DialogDescription>
                     {{ isEditMode ? 'Edit' : 'Tambah' }} buku ke dalam sistem.
                     </DialogDescription>
