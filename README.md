@@ -8,7 +8,7 @@ Project description : A Laravel project using Vue.js and Inertia.
 - PHP >= 8.2
 - Composer
 - Node.js & NPM
-- MySQL/MariaDB
+- MySQL/MariaDB/SQLite
 
 ## Installation Steps
 
